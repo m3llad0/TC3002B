@@ -1,0 +1,67 @@
+id,Archivo de texto,Título del artículo,Referencia
+1,org-001.txt,State of the art and practice in AI in education.,"Holmes, W., & Tuomi, I.State of the art and practice in AI in education. 
+European Journal of Education,
+2022,
+57, 
+542–570,
+ https://doi.org/10.1111/ejed.12533"
+2,org-002.txt,AI in Education: A Systematic Literature Review.,"Tahiru, F.
+AI in Education: A Systematic Literature Review.
+Journal of Cases on Information Technology (JCIT), 
+2021, 
+23(1),
+1-20,
+http://doi.org/10.4018/JCIT.2021010101"
+3,org-003.txt,A Review of Artificial Intelligence (AI) in Education from 2010 to 2020,"Xuesong Zhai, Xiaoyan Chu, Ching Sing Chai, Morris Siu Yung Jong, Andreja Istenic, Michael Spector, Jia-Bao Liu, Jing Yuan, Yan Li, 
+A Review of Artificial Intelligence (AI) in Education from 2010 to 2020, 
+Complexity, 
+vol. 2021, 
+Article ID 8812542, 
+18 pages, 
+2021. 
+https://doi.org/10.1155/2021/8812542"
+4,org-004.txt,"Education for AI, not AI for Education: The Role of Education and Ethics in National AI Policy Strategies","Schiff, D. 
+Education for AI, not AI for Education: The Role of Education and Ethics in National AI Policy Strategies,
+Int J Artif Intell Educ 32,
+527–563,
+2022,
+https://doi.org/10.1007/s40593-021-00270-2"
+5,org-005.txt,Emerging challenges in AI and the need for AI ethics education.,"Borenstein, J., Howard, A. 
+Emerging challenges in AI and the need for AI ethics education. 
+AI Ethics 1,
+61–65,
+2021, 
+https://doi.org/10.1007/s43681-020-00002-7"
+6,org-006.txt,Ethics of AI in Education: Towards a Community-Wide Framework.,"Holmes, W., Porayska-Pomsta, K., Holstein, K. et al.
+Ethics of AI in Education: Towards a Community-Wide Framework. 
+2022,
+Int J Artif Intell Educ 32
+, 504–526 
+https://doi.org/10.1007/s40593-021-00239-1"
+7,org-007.txt,AI and Education: Grand Challenges,"J. Kay, 
+AI and Education: Grand Challenges, 
+in IEEE Intelligent Systems, 
+vol. 27, 
+no. 5, 
+pp. 66-69, 
+Sept.-Oct. 2012, 
+https://doi.org/10.1109/MIS.2012.92"
+8,org-008.txt,Engineering Education in the Era of ChatGPT: Promise and Pitfalls of Generative AI for Education,"J. Qadir, 
+Engineering Education in the Era of ChatGPT: Promise and Pitfalls of Generative AI for Education,
+IEEE Global Engineering Education Conference (EDUCON), Kuwait,
+2023, 
+pp. 1-9, 
+https://doi.org/10.1109/EDUCON54358.2023.10125121"
+9,org-009.txt,AI in education: learner choice and fundamental rights.,"Berendt, B., Littlejohn, A., & Blakemore, M. 
+AI in education: learner choice and fundamental rights. 
+Learning, Media and Technology, 
+2020
+45(3), 
+312–324. https://doi.org/10.1080/17439884.2020.1786399"
+10,org-010.txt,AI and education: the importance of teacher and student relations,"Guilherme, A. 
+AI and education: the importance of teacher and student relations,
+AI & Soc, 
+2019,
+34, 
+47–54,
+https://doi.org/10.1007/s00146-017-0693-8"

@@ -66,8 +66,9 @@ class TextSimilarityDetector:
         similar_texts_found = False
         for i, similarity in enumerate(cosine_similarities):
             if similarity > similarity_threshold:
-                print(f"Archivo: {self.file_names[i]}, Similitud: {similarity:.4f}")
+                # print(f"Archivo: {self.file_names[i]}, Similitud: {similarity:.4f}")
                 similar_texts_found = True
+                return self.file_names[i], similarity
 
         if not similar_texts_found:
-            print("No se encontraron textos similares")
+            return "No se encontraron textos similares", 0.0

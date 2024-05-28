@@ -16,4 +16,5 @@ class TestTextSimilarityDetector(unittest.TestCase):
                 with open(file_path, 'r', encoding='utf-8') as file:
                     test_text = file.read()
                     print(f"Results for {filename}:")
-                    self.detector.check_similarity(test_text, similarity_threshold=0.3)
+                    result, similarity = self.detector.check_similarity(test_text, similarity_threshold=0.3)
+                    print(f"File: {result}, Similarity: {similarity:.4f}")

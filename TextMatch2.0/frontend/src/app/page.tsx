@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <main className="w-full h-svh bg-white">
       <section className="mx-auto py-20 px-20 flex flex-col justify-center items-center gap-y-8">
-        <h1 className=" text-gray-900 text-4xl font-bold">Text Match</h1>
+        <h1 className=" text-gray-900 text-4xl font-bold">TextMatcher</h1>
         <div className="flex flex-col gap-y-10 items-center">
           <textarea
             onChange={(e) => setText(e.target.value)}

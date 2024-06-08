@@ -3,6 +3,7 @@ from difflib import SequenceMatcher
 from sklearn.metrics.pairwise import cosine_similarity
 from app.model.preprocessor import Preprocessor
 from app.model.vectorizer import Vectorizer
+from collections import deque
 import spacy
 import os
 
@@ -44,9 +45,16 @@ class PlagiarismDetector:
         - list: A list of tuples containing indices and sentences from both documents that are considered similar.
         """
         similar_sentences = []
+        sentence_pairs = {}
+        
         for i, sent1 in enumerate(sentences1):
             for j, sent2 in enumerate(sentences2):
-                similarity = SequenceMatcher(None, sent1, sent2).ratio()
+                if (sent1, sent2) in sentence_pairs:
+                    similarity = sentence_pairs[(sent1, sent2)]
+                else:
+                    similarity = SequenceMatcher(None, sent1, sent2).ratio()
+                    sentence_pairs[(sent1, sent2)] = similarity
+
                 if similarity > 0.7:  # Threshold for considering a sentence as similar
                     similar_sentences.append((i, j, sent1, sent2, similarity))
         return similar_sentences
@@ -61,13 +69,13 @@ class PlagiarismDetector:
         Returns:
         - list: A list of tuples indicating pairs of sentences that have been reordered.
         """
-        reordered = []
+        reordered = deque()
         for i in range(len(similar_sentences) - 1):
             idx1_doc1, idx1_doc2, _, _, _ = similar_sentences[i]
             idx2_doc1, idx2_doc2, _, _, _ = similar_sentences[i + 1]
             if idx1_doc1 < idx2_doc1 and idx1_doc2 > idx2_doc2:
                 reordered.append((similar_sentences[i], similar_sentences[i + 1]))
-        return reordered
+        return list(reordered)
     
     def detect_tense_change(self, sent1, sent2):
         """
@@ -179,11 +187,12 @@ class PlagiarismDetector:
         Returns:
         - dict: The final results of plagiarism detection including types and similarity scores.
         """
-        if os.path.exists("model/word2vec_model.bin"):
-            self.model = Word2Vec.load("model/word2vec.model")
-            self.model.save("word2vec_model.bin")
+        if os.path.exists("word2vec_model.bin"):
+            self.model = Word2Vec.load("word2vec_model.bin")
         else:
             self.model = Word2Vec(sentences=self.token_lists, vector_size=150, window=2, min_count=2, workers=4,epochs=5000)
+            self.model.save("word2vec_model.bin")
+
 
         plagarism_results = self.plagiarism_type()
         similarity_results = self.evaluate_similarity(self.model, plagarism_results)
